@@ -18,22 +18,21 @@ public class Lancamento {
     @ManyToOne()
     private Fornecedor fornecedor;
 
-    private LocalDate pagamento;
-
     @Column(nullable = false)
     private Double valor;
+
+    private LocalDate pagamento;
 
     private String observacoes;
 
     public Lancamento() {
     }
 
-    public Lancamento(Long id, LocalDate data, Fornecedor fornecedor, LocalDate pagamento, Double valor, String observacoes) {
-        this.id = id;
+    public Lancamento(LocalDate data, Fornecedor fornecedor, Double valor, LocalDate pagamento, String observacoes) {
         this.data = data;
         this.fornecedor = fornecedor;
-        this.pagamento = pagamento;
         this.valor = valor;
+        this.pagamento = pagamento;
         this.observacoes = observacoes;
     }
 
@@ -61,20 +60,20 @@ public class Lancamento {
         this.fornecedor = fornecedor;
     }
 
-    public LocalDate getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(LocalDate pagamento) {
-        this.pagamento = pagamento;
-    }
-
     public Double getValor() {
         return valor;
     }
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public LocalDate getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(LocalDate pagamento) {
+        this.pagamento = pagamento;
     }
 
     public String getObservacoes() {

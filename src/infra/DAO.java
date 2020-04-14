@@ -62,7 +62,7 @@ public class DAO<E> {
     }
 
     public List<E> obterTodos() {
-        return this.obterTodos(50, 0);
+        return this.obterTodos(150, 0);
     }
 
     public List<E> obterTodos(int quantidade, int deslocamento) {
