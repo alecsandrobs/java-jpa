@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="2.1">
+
+    <named-query name="fornecedorNome">
+        <query>
+            select distinct f from Fornecedor f where f.name like :name
+        </query>
+    </named-query>
+
+</entity-mappings>
