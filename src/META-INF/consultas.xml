@@ -7,4 +7,11 @@
         </query>
     </named-query>
 
+    <named-query name="lancamentoDataFornecedorValor">
+        <query>
+            select distinct l from Lancamento l where l.data = :data and l.fornecedor.name like :name and l.valor =
+            :valor
+        </query>
+    </named-query>
+
 </entity-mappings>
