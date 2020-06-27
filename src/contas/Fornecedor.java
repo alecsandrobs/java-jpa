@@ -4,19 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "fornecedores")
-public class Fornecedor {
+public class Fornecedor extends EntidadeId {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
+    private String nome;
 
     public Fornecedor() {
     }
 
     public Fornecedor(String name) {
-        this.name = name;
+        this.nome = name;
     }
 
     public Long getId() {
@@ -27,12 +23,12 @@ public class Fornecedor {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }
 

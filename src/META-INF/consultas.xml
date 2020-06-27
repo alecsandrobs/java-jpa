@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="2.1">
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="2.0">
 
     <named-query name="fornecedorNome">
         <query>
-            select distinct f from Fornecedor f where f.name like :name
+            select distinct f from Fornecedor f where f.nome like :nome
         </query>
     </named-query>
 
     <named-query name="lancamentoDataFornecedorValor">
         <query>
-            select distinct l from Lancamento l where l.data = :data and l.fornecedor.name like :name and l.valor =
+            select distinct l from Lancamento l where l.data = :data and l.fornecedor.nome like :name and l.valor =
             :valor
         </query>
     </named-query>

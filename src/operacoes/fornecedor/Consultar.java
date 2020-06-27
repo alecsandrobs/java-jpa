@@ -16,6 +16,6 @@ public class Consultar {
         dao.fechar();
 
         System.out.println();
-        fornecedores.forEach(fornecedor -> System.out.println(String.format("%d - %s", fornecedor.getId(), fornecedor.getName())));
+        fornecedores.forEach(fornecedor -> System.out.println(String.format("%d - %s", fornecedor.getId(), fornecedor.getNome())));
     }
 }

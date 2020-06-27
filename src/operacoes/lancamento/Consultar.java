@@ -16,7 +16,7 @@ public class Consultar {
 
         System.out.println();
         lancamentos.forEach(lancamento -> {
-            System.out.println(String.format("%d - %s - %s - %.2f - %s - %s", lancamento.getId(), toFormatedData(lancamento.getData()), lancamento.getFornecedor().getName(), lancamento.getValor(), toFormatedData(lancamento.getPagamento()), lancamento.getObservacoes()));
+            System.out.println(String.format("%d - %s - %s - %.2f - %s - %s", lancamento.getId(), toFormatedData(lancamento.getData()), lancamento.getFornecedor().getNome(), lancamento.getValor(), toFormatedData(lancamento.getPagamento()), lancamento.getObservacoes()));
         });
     }
 

@@ -15,7 +15,7 @@ public class Cadastrar {
                 .fecharTransacao()
                 .fechar();
 
-        System.out.println(fornecedor.getId() + " - " + fornecedor.getName());
+        System.out.println(fornecedor.getId() + " - " + fornecedor.getNome());
 
     }
 }

@@ -10,14 +10,14 @@ public class Editar {
 
         Fornecedor fornecedor = dao.consultarUm("fornecedorNome", "name", "Teste 01");
 
-        fornecedor.setName("Teste 007");
+        fornecedor.setNome("Teste 007");
 
         dao.abrirTransacao()
                 .atualizar(fornecedor)
                 .fecharTransacao()
                 .fechar();
 
-        System.out.println(String.format("%d - %s", fornecedor.getId(), fornecedor.getName()));
+        System.out.println(String.format("%d - %s", fornecedor.getId(), fornecedor.getNome()));
 
     }
 }

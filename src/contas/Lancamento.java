@@ -6,11 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "lancamentos")
-public class Lancamento {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Lancamento extends EntidadeId {
 
     @Column(nullable = false)
     private LocalDate data;
